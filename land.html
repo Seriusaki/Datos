@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            .btn.sp{
+              display: block !important;
+              margin: 0 auto;
+            }
+            .btn.sp+.btn.sp{
+              margin-top: 15px;
+            }
+            li{
+              display: block;
+              padding: 3px 20px;
+              clear: both;
+              font-weight: 400;
+              line-height: 1.42857143;
+              color: #333;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+        </style>
+        <link rel="stylesheet" href="css/theme.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+      <div id="generar" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>¿Qué desea hacer?</p>
+              <br>
+              <div style="text-align:center">
+                <button type="button" class="btn btn-primary">Generar Factura</button>
+                <button type="button" class="btn btn-primary">Generar Boleta</button>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Cevichería Siles</a>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-md-6"><h2 style="margin-left: 10px">Bienvenido, Cevichería Siles</h2></div>
+        <div class="col-md-6"><button id="" type="button" class="btn sp btn-primary pull-right">Administrar</button></div>
+      </div>
+      <br>
+    
+    
+
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Plato</th>
+                  <th>Cantidad</th>
+                  <th>Código</th>
+                  <th>Precio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Arroz con Mauricio</td>
+                  <td>1</td>
+                  <td>0059</td>
+                  <td>S/. 12.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Arroz con Giwiro</td>
+                  <td>3</td>
+                  <td>0062</td>
+                  <td>S/. 24.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+          <button id="" type="button" class="btn sp btn-primary">Eliminar</button>
+          <button id="" onClick="$('#generar').modal('show')" type="button" class="btn sp btn-primary">Generar</button>
+          <button id="" type="button" class="btn sp btn-primary">Pedir</button>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+
+          <div class="input-group" style="margin-top: 10px">
+            <div class="input-group-btn">
+              <input id="mesa" type="text" class="form-control">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li onClick="$('#mesa').val($(this).html())">Mesa 1</li>
+                <li onClick="$('#mesa').val($(this).html())">Mesa 2</li>
+                <li onClick="$('#mesa').val($(this).html())">Mesa 3</li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div>
+
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+          <div class="input-group" style="margin-top: 10px">
+            <input type="text" class="form-control">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          </div>
+        </div>
+        <div class="col-md-2" style="text-align: center">
+          <button type="button" class="btn btn-primary">Cliente</button>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+          <button type="button" class="btn btn-primary">Agregar a la Orden</button>
+        </div>
+      </div>
+    <br><br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Plato</th>
+                <th>Código</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Precio Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arroz con Mariscos</td>
+                <td>00259</td>
+                <td>S/. 56.00</td>
+                <td>2</td>
+                <td>$/. 112.00</td>
+              </tr>
+              <tr>
+                <td>Arroz con Pato</td>
+                <td>00259</td>
+                <td>S/. 10.00</td>
+                <td>2</td>
+                <td>$/. 20.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+      <hr>
+
+      <footer>
+        <p>&copy; Siles 2014</p>
+      </footer>
+    </div> <!-- /container -->        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
